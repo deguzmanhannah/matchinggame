@@ -1,0 +1,135 @@
+/* Style sheet */
+/* Hannah de Guzman */
+/* Styles for matching game layout */
+
+:root {
+    --primary: #80b7a2;
+    --light: grey;
+    --backcolor: #f4d7e7;
+    --frontcolor: #FCF08D;
+    --cream: #ecdbc9;
+    --white: white;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #ffe9eb;
+    background: url(./img/bkground.svg);
+    background-repeat: no-repeat;
+    /* background-position: center center fixed; */
+    background-size: cover; 
+}
+
+#obj {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    top: 10%;
+    left: 15%;
+    z-index: 1;
+    visibility: hidden;
+}
+
+.gameBoard {
+    visibility: hidden;
+    display: grid;
+    grid-gap: 5px;
+    margin-top: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+     /* margin: 12% 29%;  */
+}
+
+.card {
+    margin: 10px;
+    min-width: 0%;
+    perspective: 600px;
+    cursor: pointer;
+    -webkit-perspective: 600px;
+}
+
+.faces {
+    width: 120px;
+    height: 180px;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    border: 6px solid var(--white);
+    border-radius: 20px;
+    position: absolute;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.face>* {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+     /* border-radius: 12px;  */
+}
+
+.front {
+    background-color: var(--frontcolor);
+}
+
+.back {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+
+#win {
+    width: 400px;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    visibility: hidden;
+}
+
+#splash {
+    visibility: hidden;
+    position: absolute;
+    top: 1px;
+    z-index: 2;
+}
+
+@media only screen and (min-device-width : 500px) and (max-device-width : 990px)  { 
+
+body {
+    width: 100%;
+    height: auto;
+}
+
+.gameBoard {
+    visibility: hidden;
+    display: grid;
+    grid-gap: 5px;
+    margin-top: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+     /* margin: 12% 29%;  */
+}
+
+#obj {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    z-index: 1;
+    top: -10px;
+    /* visibility: hidden; */
+
+ }
+
+
+}

@@ -1,0 +1,52 @@
+<!-- Hannah de Guzman -->
+<!-- Framework for matchi match game -->
+<!-- basic elements -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Matching Game">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Hannah de Guzman">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matchi Match Game</title>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+  
+  <!-- layout of the whole page -->
+
+  <object data="./img/splash.svg" type="image/svg+xml" id="splash"></object>
+
+  <div class="gameBoard">
+    <div class="card">
+        <div class="faces">
+            <div class="face front">
+                <img id="imgX" src="./img/deckA/card01.svg" alt="card 1">
+            </div>
+            <div class="face back">
+              <img src="img/deckA/card00.svg" alt="back card" id="bk" />
+            </div>
+        </div>
+    </div>
+  </div>
+
+<!-- two buttons for selection of deck -->
+
+<object data="./img/buttons.svg" type="image/svg+xml" id="obj"></object>
+
+<!-- win graphic -->
+<img src="./img/win.svg" alt="win graphic" id="win" />
+
+
+
+  <!-- GSAP 3 library -->
+  <script src="./js/gsap.min.js"></script>
+      <!-- GSAP LINK -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+      <!-- Javascript Link -->
+      <script src="./js/script.js"></script>
+
+</body>
+</html>
